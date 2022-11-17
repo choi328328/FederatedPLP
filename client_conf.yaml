@@ -1,0 +1,12 @@
+fftempdir: "./fftemp" # "location with space to save big data")
+dbms: "sql server" # "you dbms"
+user: "USER" # 'your username'
+pw: "PW" # 'your password'
+server: "IP" # 'your server'
+port: 1433 # 'your port'
+cdmDatabaseSchema: "CDMSCHEMADB" # 'cdm database schema'
+cdmDatabaseName: "AUSOM" # 'a friendly shareable  name for your database'
+cohortDatabaseSchema: "COHORTDB" # 'work database schema'
+oracleTempSchema: NULL # NULL
+cohortTable: "test_cohort" # table name where the cohorts will be generated
+pathToDriver: "/home/client/jdbc" # path to jdbc driver

@@ -1,0 +1,3198 @@
+{
+  "getPlpDataArgs": {
+    "maxSampleSize": null,
+    "washoutPeriod": 0
+  },
+  "skeletonType": "PatientLevelPredictionStudy",
+  "populationSettings": [{
+    "minTimeAtRisk": 364,
+    "requireTimeAtRisk": true,
+    "addExposureDaysToStart": false,
+    "riskWindowStart": 1,
+    "washoutPeriod": 365,
+    "attr_class": "populationSettings",
+    "addExposureDaysToEnd": false,
+    "includeAllOutcomes": false,
+    "priorOutcomeLookback": 99999,
+    "binary": true,
+    "removeSubjectsWithPriorOutcome": true,
+    "riskWindowEnd": 365,
+    "firstExposureOnly": true
+  }],
+  "organizationName": "OHDSI",
+  "targetIds": [1909],
+  "runPlpArgs": {
+    "nfold": 3,
+    "minCovariateFraction": 0.001,
+    "splitSeed": null,
+    "testSplit": "person",
+    "testFraction": 0.25,
+    "normalizeData": true
+  },
+  "version": "v2.7.0",
+  "outcomeIds": [1908],
+  "skeletonVersion": "v0.0.1",
+  "conceptSetCrossReference": [],
+  "cohortDefinitions": [
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Valid",
+              "CONCEPT_ID": 436665,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "13746004",
+              "VOCABULARY_ID": "SNOMED",
+              "CONCEPT_NAME": "Bipolar disorder",
+              "DOMAIN_ID": "Condition",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Clinical Finding",
+              "INVALID_REASON": "V"
+            },
+            "includeMapped": false,
+            "includeDescendants": true
+          }]},
+          "name": "Bipolar disorder",
+          "id": 0
+        }],
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 0,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "ConditionStatus": null,
+            "StopReason": null,
+            "Age": null
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "createdDate": null,
+      "createdBy": null,
+      "name": "[dylee]bipolarForbipolar",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": null,
+      "modifiedBy": null,
+      "id": 1908
+    },
+    {
+      "expression": {
+        "ExpressionLimit": {"Type": "First"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {
+          "StartDate": null,
+          "EndDate": null
+        },
+        "ConceptSets": [
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 4152280,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "370143000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Major depressive disorder",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Major depressive disorder",
+            "id": 0
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 440383,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "35489007",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Depressive disorder",
+                "DOMAIN_ID": "Condition",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Clinical Finding",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Depressive disorder",
+            "id": 1
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 436665,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "13746004",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Bipolar disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 436073,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "69322001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Psychotic disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "Major mental illness",
+            "id": 2
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 21604490,
+                "STANDARD_CONCEPT": "C",
+                "CONCEPT_CODE": "N05A",
+                "VOCABULARY_ID": "ATC",
+                "CONCEPT_NAME": "ANTIPSYCHOTICS",
+                "DOMAIN_ID": "Drug",
+                "STANDARD_CONCEPT_CAPTION": "Classification",
+                "CONCEPT_CLASS_ID": "ATC 3rd",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }]},
+            "name": "Antipsychotics",
+            "id": 4
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 710062,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "704",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "amitriptyline",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 3017597,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3333-2",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Amitriptyline [Mass/volume] in Serum or Plasma",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4288159,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "69652002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Amitriptyline measurement",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 713109,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "722",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "amoxapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 750982,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "42347",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "bupropion",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 797617,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2556",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "citalopram",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 798834,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2597",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "clomipramine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 716968,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3247",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "desipramine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 3000167,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3531-1",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Desipramine [Mass/volume] in Serum or Plasma",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4012481,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "113085002",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Desipramine measurement",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 717607,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "734064",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "desvenlafaxine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 738156,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3638",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "doxepin",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 3013265,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3579-0",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Doxepin [Mass/volume] in Serum or Plasma",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4218297,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "72234007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Doxepin measurement",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 715259,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "72625",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "duloxetine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 715939,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "321988",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "escitalopram",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 755695,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "4493",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "fluoxetine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 751412,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "42355",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "fluvoxamine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 778268,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "5691",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "imipramine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4022365,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "105213004",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Imipramine measurement",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Procedure",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 781705,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "6011",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "isocarboxazid",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 43560354,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1433212",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "levomilnacipran",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 794147,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "6646",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "maprotiline",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19080226,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "588250",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "milnacipran",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 725131,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "15996",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "mirtazapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 721724,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "7531",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "nortriptyline",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 3007857,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "3872-9",
+                  "VOCABULARY_ID": "LOINC",
+                  "CONCEPT_NAME": "Nortriptyline [Mass/volume] in Serum or Plasma",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Lab Test",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 722031,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "32937",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "paroxetine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 733896,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8123",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "phenelzine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 754270,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8886",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "protriptyline",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 766209,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "9639",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "selegiline",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 739138,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "36437",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "sertraline",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 703470,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "10734",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "tranylcypromine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 705755,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "10834",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "trimipramine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 743670,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "39786",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "venlafaxine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40234834,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1086769",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "vilazodone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44507700,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1455099",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "vortioxetine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[plp tutorial 2018] antidepressants drug/measurement",
+            "id": 6
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2108573,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "4064F",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressant pharmacotherapy prescribed (MDD, MDD ADOL)",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257553,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80338",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, not otherwise specified",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257696,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80332",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, serotonergic class; 1 or 2",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257552,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80333",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, serotonergic class; 3-5",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257738,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80334",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, serotonergic class; 6 or more",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257739,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80335",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, tricyclic and other cyclicals; 1 or 2",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257410,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80336",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, tricyclic and other cyclicals; 3-5",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257697,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80337",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antidepressants, tricyclic and other cyclicals; 6 or more",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2617574,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "G8129",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Patient documented as being treated with antidepressant medication for at least 6 months continuous treatment phase",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44786399,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "G9194",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Patient with a diagnosis of major depression documented as being treated with antidepressant medication during the entire 180 day (6 month) continuation treatment phase",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2617571,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "G8126",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Patient with a diagnosis of major depression documented as being treated with antidepressant medication during the entire 84 day (12 week) acute treatment phase",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[plp tutorial 2018] antidepressants procedures/observations",
+            "id": 7
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2108577,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "4065F",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antipsychotic pharmacotherapy prescribed (MDD)",
+                  "DOMAIN_ID": "Observation",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257488,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80342",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antipsychotics, not otherwise specified; 1-3",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257654,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80343",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antipsychotics, not otherwise specified; 4-6",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257555,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80344",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Antipsychotics, not otherwise specified; 7 or more",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 757688,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "89013",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "aripiprazole",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40164052,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "784649",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "asenapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46275300,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1658314",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "brexpiprazole",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 35603277,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1667655",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "cariprazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 794852,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2403",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "chlorpromazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19095002,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2406",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "chlorprothixene",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44816350,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80159",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Clozapine",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 800878,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2626",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "clozapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2720963,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "S0136",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Clozapine, 25 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 756018,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "4496",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "fluphenazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 766529,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "5093",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "haloperidol",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2212118,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80173",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Haloperidol",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19017241,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "73178",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "iloperidone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44786557,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J0401",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, aripiprazole, extended release, 1 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718258,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J0400",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, aripiprazole, intramuscular, 0.25 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718605,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J3230",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, chlorpromazine hcl, up to 50 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718549,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J2680",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, fluphenazine decanoate, up to 25 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718425,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J1631",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, haloperidol decanoate, per 50 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718424,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J1630",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, haloperidol, up to 5 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40664583,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J2358",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, olanzapine, long-acting, 1 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40664472,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J2426",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, paliperidone palmitate extended release, 1 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718621,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J3310",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, perphenazine, up to 5 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718315,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J0780",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, prochlorperazine, up to 10 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718584,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J2950",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, promazine hcl, up to 25 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718568,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J2794",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, risperidone (risperdal consta), 0.5 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718633,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J3400",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, triflupromazine hcl, up to 20 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2718648,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "J3486",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Injection, ziprasidone mesylate, 10 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 792263,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "6475",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "loxapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Invalid",
+                  "CONCEPT_ID": 44786380,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "C9497",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Loxapine, inhalation powder, 10 mg",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "U"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 40230761,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "1040028",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "lurasidone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 703083,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "6779",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "mesoridazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19005147,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "6852",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "methotrimeprazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 709699,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "7019",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "molindone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2007724,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "94.23",
+                  "VOCABULARY_ID": "ICD9Proc",
+                  "CONCEPT_NAME": "Neuroleptic therapy",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "4-dig billing code",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 785788,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "61381",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "olanzapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 703244,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "679314",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "paliperidone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19131663,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8042",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "perazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 733008,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8076",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "perphenazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 745790,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8331",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "pimozide",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 752061,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8704",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "prochlorperazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2721001,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "S0183",
+                  "VOCABULARY_ID": "HCPCS",
+                  "CONCEPT_NAME": "Prochlorperazine maleate, oral, 5 mg (for circumstances falling under the medicare statute, use q0164)",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "HCPCS",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19052903,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "8742",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "promazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 766814,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "51272",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "quetiapine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 735979,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "35636",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "risperidone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 700299,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "10502",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "thioridazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 700465,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "10510",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "thiothixene",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 704984,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "10800",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "trifluoperazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 19005104,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "10805",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "triflupromazine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 712615,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "115698",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "ziprasidone",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[plp tutorial 2018] antipsychotic drug/measurement/observation/procedure",
+            "id": 8
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2212121,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80178",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Lithium",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 751246,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "42351",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "lithium carbonate",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2007723,
+                  "STANDARD_CONCEPT": "N",
+                  "CONCEPT_CODE": "94.22",
+                  "VOCABULARY_ID": "ICD9Proc",
+                  "CONCEPT_NAME": "Lithium therapy",
+                  "DOMAIN_ID": "Procedure",
+                  "STANDARD_CONCEPT_CAPTION": "Non-Standard",
+                  "CONCEPT_CLASS_ID": "4-dig billing code",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[plp tutorial 2018] lithium drug/procedure/measurement",
+            "id": 9
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 740275,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "2002",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "carbamazepine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 45889818,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "1011157",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Carbamazepine",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "CPT4 Hierarchy",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2212109,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80157",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Carbamazepine; free",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2212108,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80156",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Carbamazepine; total",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44816347,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80175",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Lamotrigine",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 705103,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "28439",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "lamotrigine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 718122,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "32624",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "oxcarbazepine",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 44816361,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80183",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Oxcarbazepine",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 745466,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "40254",
+                  "VOCABULARY_ID": "RxNorm",
+                  "CONCEPT_NAME": "valproate",
+                  "DOMAIN_ID": "Drug",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Ingredient",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 46257591,
+                  "STANDARD_CONCEPT": "C",
+                  "CONCEPT_CODE": "1022260",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Valproic acid (dipropylacetic acid)",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Classification",
+                  "CONCEPT_CLASS_ID": "CPT4 Hierarchy",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 2212113,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "80164",
+                  "VOCABULARY_ID": "CPT4",
+                  "CONCEPT_NAME": "Valproic acid (dipropylacetic acid); total",
+                  "DOMAIN_ID": "Measurement",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "CPT4",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[plp tutorial 2018] mood stabilizers drug/measurement",
+            "id": 10
+          },
+          {
+            "expression": {"items": [
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 442306,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "57194009",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Adjustment disorder with depressed mood",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": true,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 436665,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "13746004",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Bipolar disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 440383,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "35489007",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Depressive disorder",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              },
+              {
+                "isExcluded": false,
+                "concept": {
+                  "INVALID_REASON_CAPTION": "Valid",
+                  "CONCEPT_ID": 4175329,
+                  "STANDARD_CONCEPT": "S",
+                  "CONCEPT_CODE": "42594001",
+                  "VOCABULARY_ID": "SNOMED",
+                  "CONCEPT_NAME": "Organic mood disorder of depressed type",
+                  "DOMAIN_ID": "Condition",
+                  "STANDARD_CONCEPT_CAPTION": "Standard",
+                  "CONCEPT_CLASS_ID": "Clinical Finding",
+                  "INVALID_REASON": "V"
+                },
+                "includeMapped": false,
+                "includeDescendants": true
+              }
+            ]},
+            "name": "[legend]depression",
+            "id": 11
+          }
+        ],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "EndDate",
+          "Offset": 0
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 11,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": null,
+                    "ConditionSourceConcept": null,
+                    "ConditionStatus": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ConditionOccurrence": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "ConditionTypeExclude": false,
+                    "CodesetId": 2,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "ConditionType": null,
+                    "ConditionSourceConcept": null,
+                    "ConditionStatus": null,
+                    "StopReason": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "no prior major mental health illness",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"DrugExposure": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "DrugSourceConcept": null,
+                    "CodesetId": 6,
+                    "DrugTypeExclude": false,
+                    "Quantity": null,
+                    "DrugType": null,
+                    "ProviderSpecialty": null,
+                    "EffectiveDrugDose": null,
+                    "Gender": null,
+                    "DaysSupply": null,
+                    "DoseUnit": null,
+                    "VisitType": null,
+                    "Refills": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RouteConcept": null,
+                    "StopReason": null,
+                    "LotNumber": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": null,
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 6,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Observation": {
+                    "ValueAsConcept": null,
+                    "ObservationType": null,
+                    "CorrelatedCriteria": null,
+                    "ObservationTypeExclude": false,
+                    "ValueAsString": null,
+                    "CodesetId": 7,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "ObservationSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "Qualifier": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ProcedureOccurrence": {
+                    "ProcedureType": null,
+                    "CorrelatedCriteria": null,
+                    "CodesetId": 7,
+                    "ProcedureSourceConcept": null,
+                    "Quantity": null,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "ProcedureTypeExclude": false,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Modifier": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "No prior antidepressants",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"DrugExposure": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "DrugSourceConcept": null,
+                    "CodesetId": 4,
+                    "DrugTypeExclude": false,
+                    "Quantity": null,
+                    "DrugType": null,
+                    "ProviderSpecialty": null,
+                    "EffectiveDrugDose": null,
+                    "Gender": null,
+                    "DaysSupply": null,
+                    "DoseUnit": null,
+                    "VisitType": null,
+                    "Refills": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RouteConcept": null,
+                    "StopReason": null,
+                    "LotNumber": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"DrugExposure": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "DrugSourceConcept": null,
+                    "CodesetId": 8,
+                    "DrugTypeExclude": false,
+                    "Quantity": null,
+                    "DrugType": null,
+                    "ProviderSpecialty": null,
+                    "EffectiveDrugDose": null,
+                    "Gender": null,
+                    "DaysSupply": null,
+                    "DoseUnit": null,
+                    "VisitType": null,
+                    "Refills": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RouteConcept": null,
+                    "StopReason": null,
+                    "LotNumber": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": null,
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 8,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ProcedureOccurrence": {
+                    "ProcedureType": null,
+                    "CorrelatedCriteria": null,
+                    "CodesetId": 8,
+                    "ProcedureSourceConcept": null,
+                    "Quantity": null,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "ProcedureTypeExclude": false,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Modifier": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 1,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Observation": {
+                    "ValueAsConcept": null,
+                    "ObservationType": null,
+                    "CorrelatedCriteria": null,
+                    "ObservationTypeExclude": false,
+                    "ValueAsString": null,
+                    "CodesetId": 8,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "ObservationSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "Qualifier": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "no prior antipsychotic use",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"DrugExposure": {
+                    "OccurrenceEndDate": null,
+                    "CorrelatedCriteria": null,
+                    "DrugSourceConcept": null,
+                    "CodesetId": 9,
+                    "DrugTypeExclude": false,
+                    "Quantity": null,
+                    "DrugType": null,
+                    "ProviderSpecialty": null,
+                    "EffectiveDrugDose": null,
+                    "Gender": null,
+                    "DaysSupply": null,
+                    "DoseUnit": null,
+                    "VisitType": null,
+                    "Refills": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RouteConcept": null,
+                    "StopReason": null,
+                    "LotNumber": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": null,
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 9,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"ProcedureOccurrence": {
+                    "ProcedureType": null,
+                    "CorrelatedCriteria": null,
+                    "CodesetId": 9,
+                    "ProcedureSourceConcept": null,
+                    "Quantity": null,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "ProcedureTypeExclude": false,
+                    "VisitType": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "Modifier": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "No prior lithium",
+            "description": null
+          },
+          {
+            "expression": {
+              "CriteriaList": [
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"DrugEra": {
+                    "EraStartDate": null,
+                    "CorrelatedCriteria": null,
+                    "OccurrenceCount": null,
+                    "AgeAtStart": null,
+                    "GapDays": null,
+                    "CodesetId": 10,
+                    "AgeAtEnd": null,
+                    "First": null,
+                    "Gender": null,
+                    "EraLength": null,
+                    "EraEndDate": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                },
+                {
+                  "RestrictVisit": false,
+                  "StartWindow": {
+                    "UseEventEnd": false,
+                    "Start": {
+                      "Days": null,
+                      "Coeff": -1
+                    },
+                    "End": {
+                      "Days": 0,
+                      "Coeff": -1
+                    },
+                    "UseIndexEnd": false
+                  },
+                  "IgnoreObservationPeriod": false,
+                  "EndWindow": null,
+                  "Criteria": {"Measurement": {
+                    "Operator": null,
+                    "RangeHigh": null,
+                    "MeasurementTypeExclude": false,
+                    "ValueAsConcept": null,
+                    "CorrelatedCriteria": null,
+                    "RangeHighRatio": null,
+                    "CodesetId": 10,
+                    "ProviderSpecialty": null,
+                    "Gender": null,
+                    "Unit": null,
+                    "RangeLowRatio": null,
+                    "MeasurementType": null,
+                    "MeasurementSourceConcept": null,
+                    "VisitType": null,
+                    "ValueAsNumber": null,
+                    "First": null,
+                    "OccurrenceStartDate": null,
+                    "RangeLow": null,
+                    "Abnormal": null,
+                    "Age": null
+                  }},
+                  "Occurrence": {
+                    "Type": 0,
+                    "CountColumn": null,
+                    "IsDistinct": false,
+                    "Count": 0
+                  }
+                }
+              ],
+              "Type": "ALL",
+              "DemographicCriteriaList": [],
+              "Groups": [],
+              "Count": null
+            },
+            "name": "No prior mood stabilizer ",
+            "description": null
+          }
+        ],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"ConditionOccurrence": {
+            "OccurrenceEndDate": null,
+            "CorrelatedCriteria": null,
+            "ConditionTypeExclude": false,
+            "CodesetId": 11,
+            "ProviderSpecialty": null,
+            "Gender": null,
+            "VisitType": null,
+            "First": true,
+            "OccurrenceStartDate": null,
+            "ConditionType": null,
+            "ConditionSourceConcept": null,
+            "ConditionStatus": null,
+            "StopReason": null,
+            "Age": {
+              "Op": "gte",
+              "Extent": 30,
+              "Value": 10
+            }
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "First"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 365
+          }
+        }
+      },
+      "createdDate": null,
+      "createdBy": null,
+      "name": "[dylee]mddForbipolarV2",
+      "modifiedDate": null,
+      "description": null,
+      "expressionType": null,
+      "modifiedBy": null,
+      "id": 1909
+    }
+  ],
+  "modelSettings": [{"GradientBoostingMachineSettings": {
+    "maxDepth": [
+      4,
+      6,
+      17
+    ],
+    "minRows": [20],
+    "seed": null,
+    "nthread": 20,
+    "ntrees": [
+      10,
+      100
+    ],
+    "learnRate": [
+      0.01,
+      0.1
+    ]
+  }}],
+  "name": "BipolarMisclassification",
+  "covariateSettings": [{
+    "VisitCountMediumTerm": false,
+    "ObservationShortTerm": true,
+    "shortTermStartDays": -30,
+    "MeasurementRangeGroupShortTerm": false,
+    "ConditionOccurrenceLongTerm": false,
+    "DrugEraStartLongTerm": false,
+    "VisitCountShortTerm": false,
+    "Chads2Vasc": false,
+    "ConditionGroupEraStartLongTerm": false,
+    "ConditionEraShortTerm": false,
+    "Dcsi": false,
+    "DrugGroupEraLongTerm": true,
+    "DrugGroupEraShortTerm": true,
+    "ConditionEraStartLongTerm": false,
+    "temporal": false,
+    "DemographicsIndexMonth": true,
+    "ConditionOccurrencePrimaryInpatientLongTerm": false,
+    "ConditionEraAnyTimePrior": false,
+    "addDescendantsToInclude": false,
+    "ConditionGroupEraStartMediumTerm": false,
+    "ProcedureOccurrenceLongTerm": true,
+    "DrugExposureLongTerm": false,
+    "DrugEraStartShortTerm": false,
+    "DistinctIngredientCountMediumTerm": false,
+    "DistinctMeasurementCountShortTerm": false,
+    "MeasurementRangeGroupLongTerm": true,
+    "ConditionGroupEraOverlapping": false,
+    "attr_fun": "getDbDefaultCovariateData",
+    "MeasurementRangeGroupMediumTerm": false,
+    "DrugGroupEraStartMediumTerm": false,
+    "MeasurementAnyTimePrior": false,
+    "MeasurementMediumTerm": false,
+    "includedCovariateIds": [],
+    "ConditionOccurrenceAnyTimePrior": false,
+    "DistinctConditionCountLongTerm": false,
+    "MeasurementValueLongTerm": false,
+    "DrugEraShortTerm": false,
+    "DrugGroupEraAnyTimePrior": false,
+    "DrugEraOverlapping": false,
+    "ConditionOccurrencePrimaryInpatientAnyTimePrior": false,
+    "ConditionEraMediumTerm": false,
+    "ConditionEraOverlapping": false,
+    "ConditionEraStartShortTerm": false,
+    "ObservationAnyTimePrior": false,
+    "VisitConceptCountShortTerm": false,
+    "DemographicsEthnicity": false,
+    "DistinctIngredientCountLongTerm": false,
+    "ConditionOccurrencePrimaryInpatientShortTerm": false,
+    "DemographicsAgeGroup": true,
+    "DistinctProcedureCountShortTerm": false,
+    "DistinctObservationCountMediumTerm": false,
+    "includedCovariateConceptIds": [],
+    "DrugGroupEraStartShortTerm": false,
+    "addDescendantsToExclude": false,
+    "DrugEraLongTerm": false,
+    "DistinctConditionCountShortTerm": false,
+    "ConditionGroupEraShortTerm": true,
+    "ConditionEraStartMediumTerm": false,
+    "VisitCountLongTerm": false,
+    "DemographicsRace": false,
+    "ProcedureOccurrenceAnyTimePrior": false,
+    "DistinctObservationCountLongTerm": false,
+    "attr_class": "covariateSettings",
+    "ProcedureOccurrenceMediumTerm": false,
+    "CharlsonIndex": true,
+    "DemographicsPriorObservationTime": false,
+    "MeasurementShortTerm": true,
+    "DistinctProcedureCountMediumTerm": false,
+    "ConditionEraLongTerm": false,
+    "DrugGroupEraStartLongTerm": false,
+    "DemographicsGender": true,
+    "DeviceExposureAnyTimePrior": false,
+    "ObservationLongTerm": true,
+    "DemographicsIndexYearMonth": false,
+    "ConditionOccurrenceMediumTerm": false,
+    "longTermStartDays": -365,
+    "DemographicsAge": false,
+    "DrugGroupEraOverlapping": true,
+    "DistinctMeasurementCountLongTerm": false,
+    "MeasurementRangeGroupAnyTimePrior": false,
+    "DistinctConditionCountMediumTerm": false,
+    "DrugGroupEraMediumTerm": false,
+    "ProcedureOccurrenceShortTerm": true,
+    "ObservationMediumTerm": false,
+    "ConditionGroupEraAnyTimePrior": false,
+    "Chads2": false,
+    "DrugExposureAnyTimePrior": false,
+    "DeviceExposureLongTerm": true,
+    "DemographicsTimeInCohort": false,
+    "DistinctMeasurementCountMediumTerm": false,
+    "MeasurementValueShortTerm": false,
+    "DeviceExposureMediumTerm": false,
+    "ConditionGroupEraStartShortTerm": false,
+    "ConditionOccurrencePrimaryInpatientMediumTerm": false,
+    "MeasurementLongTerm": true,
+    "DemographicsIndexYear": false,
+    "MeasurementValueMediumTerm": false,
+    "DrugEraStartMediumTerm": false,
+    "MeasurementValueAnyTimePrior": false,
+    "DistinctObservationCountShortTerm": false,
+    "DrugEraMediumTerm": false,
+    "ConditionGroupEraLongTerm": true,
+    "DrugExposureShortTerm": false,
+    "DistinctIngredientCountShortTerm": false,
+    "DeviceExposureShortTerm": true,
+    "mediumTermStartDays": -180,
+    "DemographicsPostObservationTime": false,
+    "VisitConceptCountLongTerm": false,
+    "VisitConceptCountMediumTerm": false,
+    "excludedCovariateConceptIds": [],
+    "ConditionGroupEraMediumTerm": false,
+    "DrugExposureMediumTerm": false,
+    "DistinctProcedureCountLongTerm": false,
+    "DrugEraAnyTimePrior": false,
+    "endDays": 0,
+    "ConditionOccurrenceShortTerm": false
+  }],
+  "conceptSets": [],
+  "id": 225,
+  "packageName": "BipolarMisclassification"
+}

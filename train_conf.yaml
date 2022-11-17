@@ -1,0 +1,10 @@
+package: "warfarinBleeding"
+project: "test"
+train_clients: ["aumc", "khmc", "mj", "kdh"] # clients in training
+fl_server_port: "AWS_SERVER:8081"
+model: resnet_simplest # model : dcn or resnet_simplest
+n_features: 100 # feature selection 후 남길 feature의 갯수
+batch_size: 256
+dp: true # apply differential privacy?
+seed: 328
+####
